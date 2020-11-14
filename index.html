@@ -3,15 +3,26 @@
         <link rel ="stylesheet" href="index.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Goldman&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/ca2aa0a9e0.js" crossorigin="anonymous"></script>
+
 
     </head>
     <body>
         <div class="container">
-            <h1 class="title">Color: Light or Dark</h1>
+            <h1 class="title" id='titlePage'>Color:<span><br />Light or Dark</span></h1>
         <div class="info">
             <div class="color">
                 <label for="hex">Color (hex)</label>
-                <input type="test" name="hex" id='hexInput' />
+                <input type="text" name="hex" id='hexInput' placeholder="#000000" value='#c6d5ac' />
+
+                <div class="toggle">
+                    <p id="lightenText" class="toggle-text">Lighten</p>
+                    <div id='toggleBtn' class="toggle-btn">
+                        <div class="innerCircle" > </div>
+                    </div>
+                    <p id="darkenText" class='toggle-text'>Darken</p>                
+                </div>
+                
                 <label for="slider" id="sliderText">0%</label>
                 <input type="range" min="0" max="100" value="0" class="slider" id="slider" name="slider"></input>
             </div>
@@ -21,12 +32,12 @@
                     <div id="inputColor" class="box"></div> 
                 </div>
                 <div class="outputColors1">
-                    <p>Altered Color</p>
-                    <div id="alteredColor" class="box"></div>                    
+                    <p id="alteredColorText">Altered Color</p>
+                    <div id="alteredColor" class="box" ></div>                    
                 </div>
             </div>
         </div>
         </div>        
-        <script src="index.pack.js"></script>
+        <script src="index.js"></script>
     </body>
 </html>
