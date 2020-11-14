@@ -3,10 +3,19 @@
         <link rel ="stylesheet" href="index.css">
     </head>
     <body>
-        container
-        title
-        input
-        slider
-        inputcolor and altered color
+        <div class="container">
+            <h1 class="title">Color Lighten or Darken</h1>
+        </div>
+        <label for="hex">Color (hex)</label>
+        <input type="test" name="hex" id='hexInput' />
+        
+        <label for="slider" id="sliderText">0%</label>
+        <input type="range" min="0" max="100" value="0" class="slider" id="slider" name="slider"></input>
+        <p>Input Color</p>
+        <div id="inputColor" class="box"></div>
+        <p>Altered Color</p>
+        <div id="slteredColor" class="box"></div>
+
+        <script src="index.pack.js"></script>
     </body>
 </html>
