@@ -11,12 +11,14 @@ const inputColor = document.getElementById('inputColor');
 const slider = document.getElementById('slider');
 const sliderText = document.getElementById('sliderText');
 const alteredColor = document.getElementById('alteredColor');
-const alteredColorText = document.getElementById('alteredColorText');
+const alteredColoredText = document.getElementById('alteredColoredText');
 const lightenText = document.getElementById('lightenText')
 const darkenText = document.getElementById('darkenText')
 const toggleBtn = document.getElementById('toggleBtn')
+const inputColoredText = document.getElementById('inputColoredText')
+const container = document.getElementsByClassName('container')
 
- // this togglese the button to lighten or darken
+ // this toggles the button to lighten or darken
 toggleBtn.addEventListener('click', () => {
     if(toggleBtn.classList.contains('toggled')) {
         toggleBtn.classList.remove('toggled');
@@ -37,6 +39,7 @@ hexInput.addEventListener('keyup', () => {
     const strippedHex = hex.replace('#', '');
 
     inputColor.style.backgroundColor = "#" + strippedHex;
+    inputColoredText.innerText = `Input Color #${strippedHex}`
     reset();
 })
 
@@ -59,10 +62,10 @@ const convertHexToRGB = (hex) => {
 
     let strippedHex = hex.replace('#', '');
     
-    if(strippedHex.length == 3) {
+    if(strippedHex.length === 3) {
         strippedHex = strippedHex[0] + strippedHex[0]
-        + strippedHex + strippedHex[1] + strippedHex[1]
-        + strippedHex + strippedHex[2] + strippedHex[2]
+         + strippedHex[1] + strippedHex[1]
+        + strippedHex[2] + strippedHex[2]
     }
 
     const r = parseInt(strippedHex.substring(0,2), 16)
@@ -122,12 +125,12 @@ slider.addEventListener('input',() => {
     const alteredHex = alterColor(hexInput.value, valueAddition);
     // update the altered color
     alteredColor.style.backgroundColor = alteredHex;
-    alteredColorText.innerText = `Altered Colors ${alteredHex}`;
+    alteredColoredText.innerText = `Altered Colors ${alteredHex}`;
 })
 
 const reset = () => {
     slider.value = 0;
     sliderText.innerText=`0%`;
     alteredColor.style.backgroundColor = hexInput.value;
-    alteredColorText.innerText = `Altered Color ${hexInput.value}`; 
+    alteredColoredText.innerText = `Altered Color ${hexInput.value}`; 
 }

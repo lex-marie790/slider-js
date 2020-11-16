@@ -20,74 +20,6 @@ body {
     margin: 20px;
 }
 
-label {
-    display: block;
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-
-input {
-    margin-bottom: 25px;
-}
-
-input[type="text"] {
-    padding: 5px 10px;
-    border-radius: 3px;
-    border: none;
-}
-
-.box {
-    height: 100px;
-    width: 100%;
-    background-color: #c6d5ac;
-    margin-bottom: 25px;
-    border-radius: 10px;
-}
-
-.toggle {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.toggle-text {
-    font-size: 18px;
-}
-
-.toggle-btn {
-    height: 30px;
-    width: 60px;
-    background-color: gray;
-    border-radius: 30px;
-    padding: 5px;
-    margin:0 10px;
-}
-
-.innerCircle {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background-color: white;
-    transition: all 250ms;
-    
-}
-
-.toggle-btn.toggled > .fas.fa-paw {
-    transform: translate(30px);
-    background-color: #333;
-}
-
-.unselected {
-    opacity: 0.25;
-}
-
-
-.toggle {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
-
 .color {
     display: flex;
     flex-direction: column;
@@ -96,9 +28,97 @@ input[type="text"] {
     width: 50%;
 }
 
+.color2 {
+    display: flex;
+    justify-content: center;
+}
+
+label {
+    display: block;
+    font-size: 20px;
+    margin-bottom: 10px;
+
+}
+
+input {
+    margin-bottom: 25px;
+}
+
+.hexInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+}
+
+.hex {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#hexInput {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+input[type="text"] {
+    padding: 5px 10px;
+    border-radius: 3px;
+    border: none;
+}
+
+.toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    /* margin-bottom: 20px; */
+}
+
+.toggle-text {
+    font-size: 18px;
+}
+
+.toggle-btn {
+    height: 70px;
+    width: 20px;
+    background-color: gray;
+    border-radius: 30px;
+    padding: 5px;
+    margin:0 10px;
+}
+
+.innerCircle {
+    /* width: 30px; */
+    /* height: 30px; */
+    /* border-radius: 50%; */
+    /* background-color: white; */
+    transition: all 250ms;
+    padding-top: inherit;
+    
+}
+
+.toggle-btn.toggled > .innerCircle {
+    transform: translateY(40px);
+    /* background-color: #333; */
+}
+
+.unselected {
+    opacity: 0.25;
+}
+
+
+/* .toggle {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+} */
+
 .outputColors {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 
 .outputColors1 {
@@ -106,4 +126,67 @@ input[type="text"] {
     flex-direction: column;
     width: 200px;
     text-align: center;
+    padding-right: 20px;
 }
+
+#inputColoredText {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    padding: 26px;
+}
+
+
+#alteredColoredText {
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    padding: 26px;
+}
+
+.slider {
+    -webkit-appearance: none;
+    appearance: none;
+    /* width: 100%; full width */
+    /* height:25px;
+    border-radius: 5px; */
+    background: none ;
+    /* outline: none; removes outline */
+    /* opacity: 0.7;sets transparency for mouse over effect */
+    -webkit-transition: .2s;
+    transition: opacity .2s; /* 2 second transition on hover */
+    /* background: url(paw.png); */
+}
+.slider:hover {
+    opacity: 1; /* fully shown on mouse over */
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* -webkit-appearance: none; overrides default look */
+    appearance: none;
+    width: 23px;
+    height:24px;
+    border:cornflowerblue ;
+    background: url('https://api.iconify.design/mdi-dog.svg') no-repeat center center / contain;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 23px;
+    height: 24px;
+    background: url('https://api.iconify.design/mdi-dog.svg') no-repeat center center / contain;
+    cursor: pointer;
+}
+
+.sliderdiv {
+    padding-top: 30px;
+}
+
+.box {
+    height: 100px;
+    width: 100%;
+    background-color: #c6d5ac;
+    margin-bottom: 25px;
+    border-radius: 100px;
+}
+

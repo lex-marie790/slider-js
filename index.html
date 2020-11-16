@@ -12,28 +12,36 @@
             <h1 class="title" id='titlePage'>Color:<span><br />Light or Dark</span></h1>
         <div class="info">
             <div class="color">
-                <label for="hex">Color (hex)</label>
-                <input type="text" name="hex" id='hexInput' placeholder="#000000" value='#c6d5ac' />
-
-                <div class="toggle">
-                    <p id="lightenText" class="toggle-text">Lighten</p>
-                    <div id='toggleBtn' class="toggle-btn">
-                        <div class="innerCircle" > </div>
+                <div class = "color2">
+                    <div class="hexInfo">
+                        <label for="hex">Color (hex)</label>
+                        <input type="text" name="hex" id='hexInput' placeholder="#000000" value='#c6d5ac' />    
                     </div>
-                    <p id="darkenText" class='toggle-text'>Darken</p>                
+                   
+                    <div class="toggle">
+                        <p id="lightenText" class="toggle-text">Lighten</p>
+                        <div id='toggleBtn' class="toggle-btn">
+                            <div class="innerCircle" ><i class='fas fa-paw'></i></div>
+                        </div>
+                        <p id="darkenText" class='toggle-text'>Darken</p>                
+                    </div>
                 </div>
-                
-                <label for="slider" id="sliderText">0%</label>
-                <input type="range" min="0" max="100" value="0" class="slider" id="slider" name="slider"></input>
+                <div class='sliderdiv'>
+                    <label for="slider" id="sliderText">0%</label>
+                    <input type="range" min="0" max="100" value="0" class="slider" id="slider" name="slider"></input>  
+                </div>
+
             </div>
             <div class="outputColors">
                 <div class="outputColors1">
-                    <p>Input Color</p>
-                    <div id="inputColor" class="box"></div> 
+                    <p id='inputColoredText'>Input Color #c6d5ac</p>
+                    <div id="inputColor" class="box" >
+                    </div> 
                 </div>
                 <div class="outputColors1">
-                    <p id="alteredColorText">Altered Color</p>
-                    <div id="alteredColor" class="box" ></div>                    
+                    <p id="alteredColoredText">Altered Color #c6d5ac</p>
+                    <div id="alteredColor" class="box" >
+                    </div>                    
                 </div>
             </div>
         </div>
